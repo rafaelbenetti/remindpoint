@@ -1,0 +1,10 @@
+﻿Desafios
+
+1) Hello World ionic.
+
+2) Agendar despertador.
+	https://github.com/wnyc/cordova-plugin-wakeuptimer
+	
+3) Ajustar layout versão 1.0.
+
+4) Agendar despertador através de sinal do beacon.

@@ -15,7 +15,29 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
 
-    }
+      cordova.plugins.notification.local.schedule({
+          id: 1,
+          title: "Production Jour fixe",
+          text: "Duration 1h",
+          firstAt: monday_9_am,
+          every: "week",
+          sound: "file://sounds/reminder.mp3",
+          icon: "http://icons.com/?cal_id=1",
+          data: { meetingId:"123#fg8" }
+      });
+      /*wakeuptimer.wakeup(
+        function(){ alert('success'); },
+        function(){ alert('error'); },
+        {
+          alarms : [{
+            type : 'onetime',
+            time : { hour : 20, minute : 18 },
+            extra : { message : 'json containing app-specific information to be posted when alarm triggers' },
+            message : 'Alarm has expired!'
+          }]
+        }
+      );
+    }*/
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
