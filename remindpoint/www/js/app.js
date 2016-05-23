@@ -15,24 +15,30 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       cordova.plugins.Keyboard.hideKeyboardAccessoryBar(true);
       cordova.plugins.Keyboard.disableScroll(true);
 
-      var myMedia = new Media("/android_asset/www/SuperMario.mp3");
-      myMedia.play();
-
-      /*var now = new Date().getTime();
+      var now = new Date().getTime();
       var _5_sec_from_now = new Date(now + 5*1000);
       cordova.plugins.notification.local.schedule({
           text: "Delayed Notification",
           at: _5_sec_from_now,
           led: "FF0000"
       });
+
       cordova.plugins.notification.local.on('trigger', function (notification) {
-         var myMedia = new Media("/SuperMario.mp3");
+         var myMedia = new Media("/android_asset/www/SuperMario.mp3");
          myMedia.play();
       }, this);
 
-      /*navigator.notification.beep(2);
+      /* Just play sound
+
+      //From dispositive.
+      var myMedia = new Media("/android_asset/www/SuperMario.mp3");
+      myMedia.play();
+
+      //From internet.
       var myMedia = new Media("http://blog.meuingles.com/wp-content/uploads/2015/12/Conto-da-Tamara-The-Weirdest-Dream.mp3");
-      myMedia.play();*/
+      myMedia.play();
+
+      */
     }
     if (window.StatusBar) {
       // org.apache.cordova.statusbar required
