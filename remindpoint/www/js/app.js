@@ -20,18 +20,15 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
       /*var now = new Date().getTime();
       var _5_sec_from_now = new Date(now + 5*1000);
-
       cordova.plugins.notification.local.schedule({
           text: "Delayed Notification",
           at: _5_sec_from_now,
           led: "FF0000"
       });
-
       cordova.plugins.notification.local.on('trigger', function (notification) {
          var myMedia = new Media("/SuperMario.mp3");
          myMedia.play();
       }, this);
-
 
       /*navigator.notification.beep(2);
       var myMedia = new Media("http://blog.meuingles.com/wp-content/uploads/2015/12/Conto-da-Tamara-The-Weirdest-Dream.mp3");
