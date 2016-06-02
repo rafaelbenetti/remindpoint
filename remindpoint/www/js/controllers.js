@@ -17,12 +17,22 @@ angular.module('starter.controllers', [])
   };
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
+//.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
+//  $scope.chat = Chats.get($stateParams.chatId);
+//})
 
-.controller('AccountCtrl', function($scope) {
+.controller('ConfigurationCtrl', function($scope) {
+  $scope.fieldsConfiguration = {};
+
   $scope.settings = {
-    enableFriends: true
+    enableRangeTime: true
+  };
+
+  $scope.clearFields = function(){
+    $scope.fieldsConfiguration = {};
+  };
+
+  $scope.saveRange = function(){
+    console.log('SALVAR - GO');
   };
 });

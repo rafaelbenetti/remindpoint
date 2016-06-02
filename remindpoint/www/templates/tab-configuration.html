@@ -1,0 +1,20 @@
+<ion-view view-title="Configuração">
+  <ion-content>
+    <ion-list>
+    <ion-toggle ng-model="settings.enableRangeTime" ng-change="clearFields()">
+		<span>Habilitar range de horário</span>
+    </ion-toggle>
+    <label class="item item-input">
+  		<span class="input-label">De:</span>
+		<input type="text" id="rangeDe" ng-disabled="!settings.enableRangeTime" ng-model="fieldsConfiguration.rangeDe">
+	</label>
+	<label class="item item-input">
+  		<span class="input-label">Até:</span>
+	<input type="text" id="rangeAte" ng-disabled="!settings.enableRangeTime" ng-model="fieldsConfiguration.rangeAte">
+	</label>
+	<button class="button button-positive btn-large" ng-click="saveRange()">
+        Salvar
+    </button >
+    </ion-list>
+  </ion-content>
+</ion-view>
